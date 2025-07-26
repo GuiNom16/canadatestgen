@@ -1,0 +1,6 @@
+{
+  "full_name": "name",
+  "email_address": "email",
+  "signup_date": "date",
+  "is_active": "boolean"
+}
