@@ -21,10 +21,37 @@ def generate_date():
 def generate_boolean():
     return random.choice([True, False])
 
+def generate_sin(formatted: bool = True) -> str:
+    digits = [str(random.randint(0, 9)) for _ in range(9)]
+    sin = ''.join(digits)
+    if formatted:
+        return f"{sin[0:3]} {sin[3:6]} {sin[6:9]}"
+    else:
+        return sin
+
+def generate_postal_code() -> str:
+    letters = "ABCEGHJKLMNPRSTVXY"
+    digits = "0123456789"
+    def random_letter():
+        return random.choice(letters)
+    def random_digit():
+        return random.choice(digits)
+    return f"{random_letter()}{random_digit()}{random_letter()} {random_digit()}{random_letter()}{random_digit()}"
+
+def generate_province() -> str:
+    provinces = [
+        "AB", "BC", "MB", "NB", "NL", "NS", "ON",
+        "PE", "QC", "SK", "NT", "NU", "YT"
+    ]
+    return random.choice(provinces)
+
 # maps schema field types to generator functions
 FIELD_MAP = {
     "name": generate_name,
     "email": generate_email,
     "date": generate_date,
-    "boolean": generate_boolean
+    "boolean": generate_boolean,
+    "sin": generate_sin,
+    "postal_code": generate_postal_code,
+    "province": generate_province,
 }

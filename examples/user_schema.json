@@ -1,6 +1,9 @@
 {
   "full_name": "name",
   "email_address": "email",
+  "sin_number": "sin",
+  "postal_code": "postal_code",
+  "province": "province",
   "signup_date": "date",
   "is_active": "boolean"
 }
