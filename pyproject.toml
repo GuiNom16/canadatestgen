@@ -1,6 +1,6 @@
 [project]
 name = "canadatestgen"
-version = "0.1.0"
+version = "0.1.1"
 description = "Generate fake Canadian-style test data with a simple CLI or Python module."
 authors = [{ name = "Your Name", email = "you@example.com" }]
 license = "MIT"
@@ -12,5 +12,5 @@ dependencies = []
 canadatestgen = "canadatestgen.cli:main"
 
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
